@@ -1,0 +1,5 @@
+# TRAVIS-CI
+language: java
+
+script:
+  - mvn compile
