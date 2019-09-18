@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="SMG-theme" basedir="." default="deploy">
+	<property name="theme.parent" value="classic" />
+
+	<import file="../build-common-theme.xml" />
+	
+	<target name="war-SVILUPPO">
+		<property name="tipo.server" value="sviluppo"/>
+		<antcall target="generic-custom-war"/>
+	</target>
+	
+	<target name="war-TEST">
+		<property name="tipo.server" value="test"/>
+		<antcall target="generic-custom-war"/>
+	</target>
+
+	<target name="generic-custom-war">
+		<antcall target="war" />
+		<property name="war.file" value="${sdk.dir}/dist/${plugin.name}-${plugin.full.version}.war"/>
+		<move file="${war.file}" tofile="${sdk.dir}/dist/smg-${tipo.server}/${plugin.name}-${plugin.full.version}.war" />
+	</target>
+</project>
