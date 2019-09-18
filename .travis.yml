@@ -3,4 +3,5 @@
 language: java
 
 script:
+  - cd src
   - mvn compile
