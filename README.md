@@ -1,5 +1,7 @@
 # Tema per SMG 2014-2020 (Liferay) #
 
+[![Build Status](https://travis-ci.org/RegioneUmbria/SMG-Tema.svg?branch=master)](https://travis-ci.org/RegioneUmbria/SMG-Tema)
+
 ## Descrizione ##
 Questo repository contiene il tema Liferay per SMG 2014-2020
 
